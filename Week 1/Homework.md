@@ -1,11 +1,13 @@
 ## Module 1 Homework: Docker & SQL
 
-## Question 1. Understanding docker first run 
+## Question 1. Understanding docker first run
+```bash
 $ docker container run -it python:3.12.8 bash
 
 root@7b10fb5682be:/# pip --version
 
 pip 24.3.1 from /usr/local/lib/python3.12/site-packages/pip (python 3.12)
+```
 
 ## Question 2. Understanding Docker networking and docker-compose
 postgres:5433
