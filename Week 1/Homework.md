@@ -10,7 +10,7 @@ pip 24.3.1 from /usr/local/lib/python3.12/site-packages/pip (python 3.12)
 ```
 
 ## Question 2. Understanding Docker networking and docker-compose
-postgres:5433
+Answer -> postgres:5433
 
 ## Question 3. Trip Segmentation Count
 During the period of October 1st 2019 (inclusive) and November 1st 2019 (exclusive),
@@ -22,7 +22,7 @@ how many trips, respectively, happened:
 4. In between 7 (exclusive) and 10 miles (inclusive),
 5. Over 10 miles
 
--- Answer: 104802, 198924, 109603, 27678, 35189
+Answer -> 104802, 198924, 109603, 27678, 35189
 
 1. Up to 1 mile
 ```postgres
@@ -31,7 +31,7 @@ FROM public.green_taxi_trips
 WHERE CAST (lpep_dropoff_datetime AS date) BETWEEN '2019-10-01' AND '2019-10-31'
 AND trip_distance <= 1;
 ```
--- Answer -> 104802
+Answer -> 104802
 
 2. In between 1 (exclusive) and 3 miles (inclusive)
 ```postgres
@@ -40,7 +40,7 @@ FROM public.green_taxi_trips
 WHERE CAST (lpep_dropoff_datetime AS date) BETWEEN '2019-10-01' AND '2019-10-31'
 AND trip_distance > 1 AND trip_distance <= 3;
 ```
--- Answer -> 198924
+Answer -> 198924
 
 3. In between 3 (exclusive) and 7 miles (inclusive)
 ```postgres
