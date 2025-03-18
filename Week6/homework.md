@@ -108,7 +108,34 @@ redpanda@02413ff6d959:/$ rpk topic consume test-topic
 ```
 
 ## Sending the taxi data
-
+check load_taxi_data.py
 
 
 ## Question 5: Build a Sessionization Window
+```
+SELECT
+    PULocationID,
+    DOLocationID,
+    MAX(streak_count) AS longest_streak
+FROM
+    processed_trips
+GROUP BY
+    PULocationID,
+    DOLocationID
+ORDER BY
+    longest_streak DESC
+LIMIT 10;
+```
+| pulocationid   | dolocationid   | longest_streak |
+|----------------|----------------|----------------|
+| 95             | 95             | 44             |
+| 7              | 7              | 43             |
+| 82             | 138            | 35             |
+| 75             | 74             | 33             |
+| 74             | 75             | 31             |
+| 223            | 223            | 30             |
+| 82             | 129            | 24             |
+| 74             | 166            | 23             |
+| 166            | 166            | 13             |
+| 82             | 7              | 13             |
+
