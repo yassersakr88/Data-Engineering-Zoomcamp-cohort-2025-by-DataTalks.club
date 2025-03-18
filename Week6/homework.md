@@ -109,6 +109,9 @@ redpanda@02413ff6d959:/$ rpk topic consume test-topic
 
 ## Sending the taxi data
 check load_taxi_data.py
+```
+Finished sending 476386 messages. Took 55.01 seconds
+```
 
 
 ## Question 5: Build a Sessionization Window
